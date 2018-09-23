@@ -3,13 +3,13 @@ require_relative 'player'
 require_relative 'dealer'
 require_relative 'card'
 require_relative 'deck'
-
+require_relative 'gambler'
 
 puts 'Please provide username:'
 username = gets.chomp
 
-user = User.new(username)
+gambler = Gambler.new(username)
 dealer = Dealer.new
-game = Game.new(user, dealer)
+game = Game.new(gambler, dealer)
 
-game.play_round
+game.round_play

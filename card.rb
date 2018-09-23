@@ -21,5 +21,7 @@ class Card
   end
 
   def to_s
+    symbols = { diamonds: "\u2666", hearts: "\u2665", clubs: "\u2663", spades: "\u2660" }.freeze
+    "#{rank.to_s.capitalize}#{symbols[suit]}"
   end
 end
